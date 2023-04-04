@@ -15,3 +15,11 @@
 .negative {
   color: red;
 }
+
+/*work with attribute directives */
+.large-change {
+  font-size: 3.2em;
+}
+.small-change {
+  font-size: 1em;
+}

@@ -1,12 +1,13 @@
 <div class="stock-container">
-  <div class="name">
+  <div class="name" [ngStyle]="stockStyles">
     <h3>{{ stockObj.name }}</h3>
     -
     <h4>({{ stockObj.code }})</h4>
   </div>
-  <div [class]="stockObj.isPositiveChange() ? 'positive' : 'negative'">
+  <!-- <div [class]="stockObj.isPositiveChange() ? 'positive' : 'negative'">
     $ {{ stockObj.price }}
-  </div>
+  </div> -->
+  <div [ngClass]="stockClass">$ {{ stockObj.price }}</div>
   <button (click)="toggleFavorite($event)" [disabled]="stockObj.favorite">
     Add to Favorite
   </button>

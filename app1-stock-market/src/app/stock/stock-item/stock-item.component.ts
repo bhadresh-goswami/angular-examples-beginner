@@ -8,6 +8,8 @@ import { stock } from 'src/app/models/stock.model';
 })
 export class StockItemComponent implements OnInit, OnDestroy {
   stockObj!: stock;
+  public stockClass?: any;
+  public stockStyles?: any;
   // public name!: string;
   // public code!: string;
   // public price!: number;
@@ -23,7 +25,19 @@ export class StockItemComponent implements OnInit, OnDestroy {
     // this.previousPrice = 80;
     // this.positiveChange = this.price >= this.previousPrice;
     // this.favorite = false;
-    this.stockObj = new stock('Test Stock Company', 'TSC', 85, 80);
+    this.stockObj = new stock('Test Stock Company', 'TSC', 80, 10);
+    let diff = this.stockObj.price / this.stockObj.previousPrice;
+    let largeChange = Math.abs(diff) > 0.1;
+    this.stockClass = {
+      positive: this.stockObj.isPositiveChange,
+      negative: !this.stockObj.isPositiveChange,
+      'large-change': largeChange,
+      'small-change': !largeChange,
+    };
+    this.stockStyles = {
+      color: this.stockObj.isPositiveChange() ? 'green' : 'red',
+      'font-size': largeChange ? '1.2em' : '0.8em',
+    };
   }
 
   toggleFavorite(event: Event) {
