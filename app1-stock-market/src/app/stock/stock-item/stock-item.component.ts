@@ -10,6 +10,7 @@ export class StockItemComponent implements OnInit, OnDestroy {
   stockObj!: stock;
   public stockClass?: any;
   public stockStyles?: any;
+  public stockList!: stock[];
   // public name!: string;
   // public code!: string;
   // public price!: number;
@@ -38,6 +39,12 @@ export class StockItemComponent implements OnInit, OnDestroy {
       color: this.stockObj.isPositiveChange() ? 'green' : 'red',
       'font-size': largeChange ? '1.2em' : '0.8em',
     };
+
+    this.stockList = [
+      new stock('b', 'b', 10, 21),
+      new stock('c', 'b', 20, 31),
+      new stock('a', 'b', 100, 3),
+    ];
   }
 
   toggleFavorite(event: Event) {
