@@ -1,0 +1,10 @@
+.product-container {
+  width: 400px;
+  height: 200px;
+  padding: 2px 5px;
+  margin: 0px auto;
+}
+.isOnSales {
+  background-color: green !important;
+  color: red;
+}

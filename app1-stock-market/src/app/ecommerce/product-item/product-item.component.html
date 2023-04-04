@@ -1,0 +1,26 @@
+<div class="product-container">
+  <input
+    type="checkbox"
+    id="isOnSaleId"
+    name="isOnSaleId"
+    (change)="setProductOnSales()"
+  />
+  Is Product On Sale?
+  <br />
+  <div [class]="product.isOnSale ? 'isOnSales' : ''">
+    <h2>
+      {{ product.name }}
+    </h2>
+    <p>{{ product.description }}</p>
+    <h4>{{ product.price }}</h4>
+    <br />
+    <b>Purchase Quantity:</b>
+    <input type="text" [value]="productQuantityForSales" />
+  </div>
+  <button [disabled]="product.isOnSale" (click)="setQuantity(1)">
+    Increase Quantity
+  </button>
+  <button [disabled]="product.isOnSale" (click)="setQuantity(-1)">
+    Decrease Quantity
+  </button>
+</div>
