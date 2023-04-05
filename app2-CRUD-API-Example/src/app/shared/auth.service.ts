@@ -6,7 +6,4 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
   constructor(private http: HttpClient) {}
-  getData() {
-    return this.http.get('http://localhost:3000/api/v1/auth/data');
-  }
 }

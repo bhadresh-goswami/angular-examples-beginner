@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthenticationRoutingModule } from './authentication/authentication-routing.module';
 import { CheckboxModule } from 'primeng/checkbox';
+import { ButtonModule } from 'primeng/button';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     AuthenticationRoutingModule,
     CheckboxModule,
     HttpClientModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
