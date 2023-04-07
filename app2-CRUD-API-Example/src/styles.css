@@ -1,3 +1,6 @@
-@import "primeng/resource/primeng.min.css";
-@import "primeng/resource/themes/nove-light/theme.css";
-@import "primeicons/primeicons.css";
+body {
+  /* background-image: url("../../../assets/38598.jpg"); */
+  background-image: url("/assets/38598.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

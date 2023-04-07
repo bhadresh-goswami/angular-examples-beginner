@@ -1,0 +1,27 @@
+<div class="text-900 text-3xl font-medium mb-3">Manage Questions</div>
+<div class="m-1">
+  <div class="flex flex-wrap justify-center">
+    <div class="w-full md:w-1/2 px-4">
+      <div class="card">
+        <p-table [value]="test" [tableStyle]="{ 'min-width': '50rem' }">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-product>
+            <tr>
+              <!-- <td>{{ product.code }}</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.category }}</td>
+              <td>{{ product.quantity }}</td> -->
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+</div>

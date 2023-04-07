@@ -1,13 +1,59 @@
-<button pButton type="button" class="p-button-info"></button>
-<button pButton type="button" label="Primary"></button>
-<button
-  pButton
-  type="button"
-  label="Secondary"
-  class="p-button-secondary"
-></button>
-<button pButton type="button" label="Success" class="p-button-success"></button>
-<button pButton type="button" label="Info" class="p-button-info"></button>
-<button pButton type="button" label="Warning" class="p-button-warning"></button>
-<button pButton type="button" label="Help" class="p-button-help"></button>
-<button pButton type="button" label="Danger" class="p-button-danger"></button>
+<div class="flex align-items-center justify-content-center mb-6">
+  <div class="surface-card p-4 shadow-2 border-round w-full lg:w-4">
+    <div class="text-center mb-5">
+      <div class="text-900 text-3xl font-medium mb-3">
+        Welcome To CS Examination System
+      </div>
+    </div>
+    <form [formGroup]="loginForm" (submit)="onSubmit(loginForm)">
+      <div>
+        <label for="email1" class="block text-900 font-medium mb-2"
+          >Email</label
+        >
+        <input
+          id="email1"
+          type="text"
+          placeholder="Email address"
+          pInputText
+          class="w-full mb-3 p-inputtext-sm"
+          formControlName="email"
+        />
+
+        <label for="password1" class="block text-900 font-medium mb-2"
+          >Password</label
+        >
+        <input
+          id="password1"
+          type="password"
+          placeholder="Password"
+          pInputText
+          class="w-full mb-3 p-inputtext-sm"
+          formControlName="password"
+        />
+
+        <div class="flex align-items-center justify-content-between mb-6">
+          <div class="flex align-items-center">
+            <p-checkbox
+              id="rememberme"
+              [binary]="true"
+              styleClass="mr-2"
+            ></p-checkbox>
+            <label for="rememberme1">Remember me</label>
+          </div>
+          <a
+            class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer"
+            >Forgot password?</a
+          >
+        </div>
+        <p-messages></p-messages>
+        <button
+          pButton
+          pRipple
+          label="Sign In"
+          icon="pi pi-user"
+          class="w-full p-button-sm"
+        ></button>
+      </div>
+    </form>
+  </div>
+</div>
